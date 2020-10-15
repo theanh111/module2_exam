@@ -100,13 +100,22 @@ public class Main {
                     break;
 
                 case 6:
+// // Đọc file với pathname ngẫu nhiên:
+//                    System.out.println();
+//                    System.out.println("--- Read a file ---");
+//                    System.out.println("Input a pathname to read: ");
+//                    input.nextLine();
+//                    String pathNameToRead = input.nextLine();
+//                    ReadFileService readFileService = new ReadFileService();
+//                    readFileService.readFile(pathNameToRead);
+//                    break;
+
+                    // // Đọc file từ file csv bài thi Module 2:
                     System.out.println();
                     System.out.println("--- Read a file ---");
-                    System.out.println("Input a pathname to read: ");
-                    input.nextLine();
-                    String pathNameToRead = input.nextLine();
                     ReadFileService readFileService = new ReadFileService();
-                    readFileService.readFile(pathNameToRead);
+                    readFileService.readFile("D:\\CodeGym\\Module_02\\untitled3\\src\\contacts.csv");
+                    break;
 
                 case 7:
                     System.out.println();

@@ -8,17 +8,17 @@ import java.util.List;
 public class WriteFileService {
     public void writeFile(String pathname, List<PhoneBook> list) {
         try {
-                ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(pathname));
+            ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(pathname));
             for (int i = 0; i < list.size(); i++) {
                 outputStream.writeObject(list.get(i));
             }
-                outputStream.close();
-            } catch (NullPointerException e) {
-                e.printStackTrace();
-            } catch (NotSerializableException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            outputStream.close();
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        } catch (NotSerializableException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

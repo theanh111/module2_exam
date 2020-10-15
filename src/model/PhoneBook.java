@@ -1,6 +1,8 @@
 package model;
 
-public class PhoneBook {
+import java.io.Serializable;
+
+public class PhoneBook implements Serializable {
     private int numberPhone;
     private String typeOfPhoneBook;
     private String name;
