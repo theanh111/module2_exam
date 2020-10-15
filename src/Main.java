@@ -3,10 +3,6 @@ import service.PhoneBookManagement;
 import service.ReadFileService;
 import service.WriteFileService;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -34,6 +30,7 @@ public class Main {
                     System.out.println("Phone number");
                     int phoneNumber = input.nextInt();
                     System.out.println("Type of phonebook: ");
+                    input.nextLine();
                     String typePhoneBook = input.nextLine();
                     System.out.println("Name: ");
                     String name = input.nextLine();
@@ -100,14 +97,14 @@ public class Main {
                     break;
 
                 case 6:
-// // Đọc file với pathname ngẫu nhiên:
+//                    // Đọc file với File Binary:
 //                    System.out.println();
 //                    System.out.println("--- Read a file ---");
 //                    System.out.println("Input a pathname to read: ");
 //                    input.nextLine();
 //                    String pathNameToRead = input.nextLine();
 //                    ReadFileService readFileService = new ReadFileService();
-//                    readFileService.readFile(pathNameToRead);
+//                    readFileService.readFBinaryFile(pathNameToRead);
 //                    break;
 
                     // // Đọc file từ file csv bài thi Module 2:

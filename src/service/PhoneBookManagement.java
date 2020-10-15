@@ -11,8 +11,8 @@ public class PhoneBookManagement implements IService<PhoneBook> {
 
     static {
         phoneBookList = new ArrayList<>();
-        phoneBookList.add(new PhoneBook(585200, "Family", "John", "Male", "USA", "12-05-1999", "john@gmail.com" ));
-        phoneBookList.add(new PhoneBook(681589, "Company", "Ken", "Male", "Ha Noi", "2-5-1992", "ken@gmail.com" ));
+//        phoneBookList.add(new PhoneBook(585200, "Family", "John", "Male", "USA", "12-05-1999", "john@gmail.com"));
+//        phoneBookList.add(new PhoneBook(681589, "Company", "Ken", "Male", "Ha Noi", "2-5-1992", "ken@gmail.com"));
     }
 
     @Override
@@ -27,10 +27,15 @@ public class PhoneBookManagement implements IService<PhoneBook> {
 
     @Override
     public void add(PhoneBook phoneBook) {
+        boolean flag = true;
         for (int i = 0; i < phoneBookList.size(); i++) {
-            if (phoneBook.getNumberPhone() != phoneBookList.get(i).getNumberPhone()) {
-                phoneBookList.add(phoneBook);
+            if (phoneBook.getNumberPhone() == phoneBookList.get(i).getNumberPhone()) {
+                flag = false;
+                break;
             }
+        }
+        if (flag) {
+            phoneBookList.add(phoneBook);
         }
     }
 
