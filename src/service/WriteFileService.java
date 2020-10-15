@@ -13,10 +13,6 @@ public class WriteFileService {
                 outputStream.writeObject(list.get(i));
             }
             outputStream.close();
-        } catch (NullPointerException e) {
-            e.printStackTrace();
-        } catch (NotSerializableException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
