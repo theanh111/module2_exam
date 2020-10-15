@@ -12,6 +12,7 @@ public class PhoneBookManagement implements IService<PhoneBook> {
     static {
         phoneBookList = new ArrayList<>();
         phoneBookList.add(new PhoneBook(585200, "Family", "John", "Male", "USA", "12-05-1999", "john@gmail.com" ));
+        phoneBookList.add(new PhoneBook(681589, "Company", "Ken", "Male", "Ha Noi", "2-5-1992", "ken@gmail.com" ));
     }
 
     @Override
